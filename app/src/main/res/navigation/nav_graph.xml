@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/ArticleApiFragment">
+
+    <fragment
+        android:id="@+id/ArticleApiFragment"
+        android:name="com.farouk.prisma.view.ui.ArticleApiFragment"
+        android:label="@string/main_title"
+        tools:layout="@layout/fragment_article_api">
+
+        <action
+            android:id="@+id/action_ArticleApiFragment_to_ArticleDbFragment"
+            app:destination="@id/ArticleDbFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ArticleDbFragment"
+        android:name="com.farouk.prisma.view.ui.ArticleDbFragment"
+        android:label="@string/main_title"
+        tools:layout="@layout/fragment_article_db">
+        <action
+            android:id="@+id/action_ArticleDbFragment_to_ArticleApiFragment"
+            app:destination="@id/ArticleApiFragment" />
+    </fragment>
+
+</navigation>
